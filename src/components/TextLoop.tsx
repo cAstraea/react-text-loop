@@ -23,6 +23,7 @@ type Props = {
     noWrap: boolean;
     className?: string;
     onChange?: Function;
+    textAlignCenter: boolean;
 };
 
 type State = {
@@ -50,6 +51,7 @@ class TextLoop extends React.PureComponent<Props, State> {
         fade: true,
         mask: false,
         noWrap: true,
+        textAlignCenter: false
     };
 
     constructor(props: Props) {
@@ -240,6 +242,7 @@ class TextLoop extends React.PureComponent<Props, State> {
 
     render(): JSX.Element {
         const { className = "" } = this.props;
+        const { textAlignCenter } = this.props;
         return (
             <div className={`${this.wrapperStyles} ${className}`}>
                 <TransitionMotion
@@ -273,7 +276,17 @@ class TextLoop extends React.PureComponent<Props, State> {
                                         key={config.key}
                                         style={{
                                             opacity: config.style.opacity,
-                                            transform: `translateY(${config.style.translate}px)`,
+                                            // transform: `translateY(${config.style.translate}px)`,
+                                            transform:
+                                                textAlignCenter
+                                                    ? `translateY(${config.style.translate}px)`
+                                                    : `translate(50%, ${config.style.translate}px)`
+                                            ,
+                                            left:
+                                                textAlignCenter
+                                                    ? "50%"
+                                                    : "0"
+                                            ,
                                             position:
                                                 this.wordBox == null
                                                     ? "relative"
