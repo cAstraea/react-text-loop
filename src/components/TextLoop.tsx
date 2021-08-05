@@ -279,14 +279,9 @@ class TextLoop extends React.PureComponent<Props, State> {
                                             // transform: `translateY(${config.style.translate}px)`,
                                             transform:
                                                 textAlignCenter
-                                                    ? `translateY(${config.style.translate}px)`
-                                                    : `translate(50%, ${config.style.translate}px)`
-                                            ,
-                                            left:
-                                                textAlignCenter
-                                                    ? "50%"
-                                                    : "0"
-                                            ,
+                                                ? `translate(50%, ${config.style.translate}px)`
+                                                : `translateY(${config.style.translate}px)`,
+                                            left: textAlignCenter ? "50%" : "0",
                                             position:
                                                 this.wordBox == null
                                                     ? "relative"

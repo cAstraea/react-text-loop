@@ -240,7 +240,7 @@ function (_React$PureComponent) {
           style: {
             opacity: config.style.opacity,
             // transform: `translateY(${config.style.translate}px)`,
-            transform: textAlignCenter ? "translateY(" + config.style.translate + "px)" : "translate(50%, " + config.style.translate + "px)",
+            transform: textAlignCenter ? "translate(50%, " + config.style.translate + "px)" : "translateY(" + config.style.translate + "px)",
             left: textAlignCenter ? "50%" : "0",
             position: _this4.wordBox == null ? "relative" : "absolute"
           }
