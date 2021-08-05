@@ -21,7 +21,7 @@
         "test": "jest",
         "test:coverage": "jest --coverage",
         "ts:check": "tsc -p tsconfig.json --allowJs false --noEmit --emitDeclarationOnly false",
-        "prepare": "npm run build"
+        "install": "npm run install"
     },
     "repository": {
         "type": "git",
