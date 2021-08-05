@@ -277,9 +277,8 @@ class TextLoop extends React.PureComponent<Props, State> {
                                         style={{
                                             opacity: config.style.opacity,
                                             // transform: `translateY(${config.style.translate}px)`,
-                                            transform:
-                                                textAlignCenter
-                                                ? `translate(50%, ${config.style.translate}px)`
+                                            transform: textAlignCenter
+                                                ? `translate(-50%, ${config.style.translate}px)`
                                                 : `translateY(${config.style.translate}px)`,
                                             left: textAlignCenter ? "50%" : "0",
                                             position:
