@@ -20,8 +20,7 @@
         "prepublishOnly": "yarn run test && yarn run lint && yarn run ts:check && yarn run clean && yarn run build",
         "test": "jest",
         "test:coverage": "jest --coverage",
-        "ts:check": "tsc -p tsconfig.json --allowJs false --noEmit --emitDeclarationOnly false",
-        "install": "npm run install"
+        "ts:check": "tsc -p tsconfig.json --allowJs false --noEmit --emitDeclarationOnly false"
     },
     "repository": {
         "type": "git",
